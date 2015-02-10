@@ -31,8 +31,7 @@ The util.py module has, surprise, utility stuff in it. In particular, there is a
 
 ***
 
-Last Modified Date: 2009-07-02 
-Dave Rogers 
-Email questions, corrections: 
-drogers141 at sbcglobal dot net, or if no response, 
-drogers141 at gmail dot com
+Last Modified Date: 2009-07-02   
+Dave Rogers    
+Email questions, corrections:   
+dave at drogers dot us
