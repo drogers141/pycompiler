@@ -33,10 +33,9 @@ The source code is organized into three packages under src/:
 - tree - gui implemented in Tkinter allowing graphical display of LL(1) parse trees.  It is an
 extension of the generic tree viewer from Mark Lutz's Programming Python, 3rd. Ed.  
 
-There is documentation for each of the packages as well:
-- [pycompiler] (./doc/pycompiler_package.html)
-- [test] (./doc/test_package.html)
-- [tree] (./doc/tree_package.html)
+There is documentation for the packages as well:
+- [pycompiler] (./doc/pycompiler_package.md)
+- [tree] (./doc/tree_package.md)
 
 ## Usage
 For compiler usage examples, consult the tests.  The grammars/, resources/, and sourcefiles/ directories
