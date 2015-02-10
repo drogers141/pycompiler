@@ -1,0 +1,24 @@
+declare x(5);
+numtosort=5;
+i=1;
+:in:
+     get x(i);
+     i=i+1;
+     if i<=numtosort then goto in;
+i=1;
+:nexti:
+     j=i+1;
+     :nextj:
+          if x(j)<x(i) then
+               do;
+               temp=x(i);
+               x(i)=x(j);
+               x(j)=temp;
+               end;
+          j=j+1;
+          if j<=numtosort then goto nextj;
+     put x(i);
+     i=i+1;
+     if i<=numtosort-1 then goto nexti;
+put x(numtosort);
+stop;

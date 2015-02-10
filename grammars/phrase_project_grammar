@@ -1,0 +1,22 @@
+CFG for Phrases Project
+
+start_symbol = p
+terminals = ['int', 'x', ';', '=', '+', '*', '(', ')', #, %]
+nonterminals = [p, decls, decl, states, state, e, mt, t, mf, f]
+
+rules:                          parse actions:
+p	->  decls states            { int, x, # }
+decls	->  decl decls          { int }
+decls	->  					{ x, # }
+decl	->  'int' 'x' ';'		{ int }
+states	->  state states		{ x }
+states	->  					{ # }
+state	->  'x' '=' e ';'		{ x }
+e 	->   t mt                   { x, ( }
+mt 	->   '+' t mt               { + }
+mt 	->                          { ), ; }
+t 	->   f mf                   { x, ( }
+mf 	->   '*' f mf               { * }
+mf 	->                          { +, ), ; }
+f 	->   'x'                    { x }
+f 	->   '(' e ')'              { ( }

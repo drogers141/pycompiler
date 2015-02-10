@@ -1,0 +1,22 @@
+CFG for Phrases Project
+
+start_symbol = p
+terminals = ['int', 'x', ';', '=', '+', '*', '(', ')']
+nonterminals = [p, decls, decl, states, state, e, mt, t, mf, f]
+
+rules:
+p	->  decls states
+decls	->  decl decls
+decls	->  
+decl	->  'int' 'x' ';'
+states	->  state states
+states	->  
+state	->  'x' '=' e ';'
+e 	->   t mt
+mt 	->   '+' t mt
+mt 	->   
+t 	->   f mf
+mf 	->   '*' f mf
+mf 	->   
+f 	->   'x'
+f 	->   '(' e ')'

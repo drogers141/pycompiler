@@ -1,0 +1,28 @@
+CFG with PA for Semi-simple Assignments
+Dave Rogers
+Relates to Problems 3,4 at end of File 07_LLTables1.doc
+Note that # indicates end of input and % indicates bottom of stack
+
+Adds nonterminals, u (unary operator), and a (assignment), and
+adds terminals $int (integer), /, and -  to gse3
+
+start_symbol = a
+terminals = [$int, $id, =, +, -, *, /, (, ), #, %]
+nonterminals = [a, e, mt, t, mf, f, u]
+
+rules:                      parse actions:
+a	->  $id = e 			{ $id }
+e 	->  u t mt              { $id, $int, (, -, + }
+mt 	->  + t mt            	{ + }
+mt 	->  - t mt            	{ - }
+mt 	->                      { ), # }
+t 	->  f mf               	{ $id, $int, ( }
+mf 	->  * f mf             	{ * }
+mf	->	/ f mf				{ / }
+mf 	->                      { +, -, ), # }
+f 	->  $id               	{ $id }
+f	->	$int				{ $int }
+f 	->  ( e )           	{ ( }
+u	->	-					{ - }
+u	->	+					{ + }
+u	->						{ (, $id, $int }

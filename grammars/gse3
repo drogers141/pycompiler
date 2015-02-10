@@ -1,0 +1,17 @@
+The gse3 grammar in a form to be read by Grammar.create_grammar()
+
+start_symbol = goal
+terminals = [ $id, *, +, (, ), #, % ]
+nonterminals = [ e, goal, t, mt, f, mf ]
+
+rules:          parse actions:
+goal -> e       { $id, ( }
+e -> t mt       { $id, ( }
+mt -> + t mt    { + }
+mt ->           { ), # }
+t -> f mf       { $id, ( }
+mf -> * f mf    { * }
+mf ->           { +, ), # }
+f -> $id        { $id }
+f -> ( e )      { ( }
+

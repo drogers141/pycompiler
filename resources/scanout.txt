@@ -1,0 +1,15 @@
+state=s    ch=i
+state=l    ch= 
+>>>>>>>>>>>emitting token.    name=$id    value=i
+state=s    ch= 
+state=s    ch==
+>>>>>>>>>>>emitting token.    name==    value=
+state=s    ch= 
+state=s    ch=0
+state=d    ch=;
+>>>>>>>>>>>emitting token.    name=$int    value=0
+state=s    ch=;
+>>>>>>>>>>>emitting token.    name=;    value=
+state=s    ch=#
+eof read by scanner
+scanner done

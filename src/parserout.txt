@@ -1,0 +1,74 @@
+Beginning Parse:
+
+stack:    goal  %
+token:    $id      value:  
+
+rule 0:   goal -> e
+stack:    e  %
+token:    $id      value:  
+
+rule 1:   e -> t mt
+stack:    t  mt  %
+token:    $id      value:  
+
+rule 4:   t -> f mf
+stack:    f  mf  mt  %
+token:    $id      value:  
+
+rule 7:   f -> $id
+stack:    $id  mf  mt  %
+token:    $id      value:  
+
+matching: $id
+stack:    mf  mt  %
+token:    *      value:  
+
+rule 5:   mf -> * f mf
+stack:    *  f  mf  mt  %
+token:    *      value:  
+
+matching: *
+stack:    f  mf  mt  %
+token:    $id      value:  
+
+rule 7:   f -> $id
+stack:    $id  mf  mt  %
+token:    $id      value:  
+
+matching: $id
+stack:    mf  mt  %
+token:    +      value:  
+
+rule 6:   mf -> 
+stack:    mt  %
+token:    +      value:  
+
+rule 2:   mt -> + t mt
+stack:    +  t  mt  %
+token:    +      value:  
+
+matching: +
+stack:    t  mt  %
+token:    $id      value:  
+
+rule 4:   t -> f mf
+stack:    f  mf  mt  %
+token:    $id      value:  
+
+rule 7:   f -> $id
+stack:    $id  mf  mt  %
+token:    $id      value:  
+
+matching: $id
+stack:    mf  mt  %
+token:    #      value:  
+
+rule 6:   mf -> 
+stack:    mt  %
+token:    #      value:  
+
+rule 3:   mt -> 
+stack:    %
+token:    #      value:  
+
+accept
