@@ -1,13 +1,13 @@
 # PyCompiler
-This is a compiler and parse tree viewer implemented in Python for a simplified language with syntax 
-similar to PL/1 called PL/H that I wrote in 2009.  It was early into my experience with python, so the 
-code may not be as pythonic as it could be, but I was generally happy with the project.
+This is a compiler and parse tree viewer implemented in Python that I wrote in 2009.  It was early into 
+my experience with python, so the code may not be as pythonic as it could be, but I was generally happy 
+with the project.
 
-The language and requirements of the compiler are from Dr. James Daley's undergrad compiler class at 
-CSU East Bay. While the requirements for the class were 
-generally met by students extending an existing procedural code base in C/C++ to form a parser, vm, and 
-interpreter for this language, I reimplemented the compiler in python adding quite a bit more power
-and generality, with less code. 
+While this is a general LL(1) compiler, the work stems from Dr. James Daley's 
+undergrad compiler class at CSU East Bay. While the requirements for the class were 
+generally met by students extending an existing code base in C/C++ to form a parser, vm, and 
+interpreter for a simplified language with syntax similar to PL/1 called PL/H, I reimplemented the 
+compiler in python adding quite a bit more power and generality, with less code. 
 
 ## Overview
 The PyCompiler project is an implementation of a compiler based on the course work of CS4110 at 
